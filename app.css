@@ -1,0 +1,637 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* navbar section */
+
+nav {
+  background-color: #1c181d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 12px 16px;
+  position: relative;
+}
+
+.smallScreen-logo {
+  display: none;
+}
+@media screen and (max-width: 426px) {
+  nav {
+    gap: 8px;
+  }
+
+  .largeScreen-logo {
+    display: none;
+  }
+  .smallScreen-logo {
+    display: block;
+  }
+}
+
+.search {
+  position: relative;
+  width: 33.3%;
+}
+
+@media screen and (max-width: 426px) {
+  .search {
+    width: 61%;
+  }
+}
+
+.search input {
+  background-color: #322f33;
+  padding: 8px;
+  border-radius: 8px;
+  color: #b5b5b5;
+  border: 1px solid #616161;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.search input:hover {
+  border: 1px solid #e1e1e1;
+}
+
+.search input:visited {
+  border: 2px solid #ffffff;
+}
+
+.search-icon {
+  position: absolute;
+  top: 1px;
+
+  padding: 8px;
+  left: 0px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 426px) {
+  .profile {
+    gap: 0px;
+  }
+}
+
+.profile span.left {
+  font-size: 12px;
+  font-weight: 500;
+  color: #e3e3e3;
+}
+
+.profile span.right {
+  background-color: #36fba1;
+  font-size: 12px;
+  font-weight: 500;
+  color: #00000066;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.profile div:last-child {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 2px 2px 8px;
+  border-radius: 8px;
+  background-color: #303030;
+}
+
+.menu-dropdown:focus {
+  outline: 2px solid #b5b5b5;
+}
+
+.profile div:last-child:hover,
+.icon-block:hover {
+  background-color: #616161;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+  .profile div:last-child {
+    background-color: #1c181d;
+    padding: 2px;
+  }
+  .profile div:last-child span:first-child {
+    display: none;
+  }
+}
+
+.notif-icon {
+  width: 20px;
+  height: 20px;
+}
+.icon-block {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #303030;
+}
+
+.icon-block:focus {
+  outline: 2px solid #b5b5b5;
+}
+
+@media screen and (max-width: 426px) {
+  .notif-icon {
+    background-color: #1c181d;
+  }
+  .icon-block {
+    background-color: #1c181d;
+  }
+}
+
+/* message section */
+
+.message {
+  width: 55.5%;
+  margin: auto;
+  margin-top: 32px;
+  padding: 16px 12px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  outline: 2px solid #b5b5b5;
+}
+
+@media screen and (max-width: 426px) {
+  .message {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+.messageItems {
+  background-color: #1c181d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.messageItems p {
+  font-size: 13px;
+  line-height: 18.2px;
+  color: #e3e3e3;
+}
+
+.messageItems div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.messageItems div button,
+.largeScreen-btn {
+  padding: 6px 12px 6px 12px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  color: #323232;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.largeScreen-btn {
+  display: none;
+}
+
+@media screen and (max-width: 426px) {
+  .messageItems div button {
+    display: none;
+  }
+  .largeScreen-btn {
+    margin-top: 18px;
+    display: block;
+  }
+}
+
+.messageItems div svg {
+  width: 20px;
+  height: 20px;
+}
+
+.Mainguide {
+  background-color: white;
+  padding: 8px;
+  border-radius: 18px;
+  border: 1px solid #dbdbdb;
+  width: 55.5%;
+  height: max-content;
+  margin: 16px auto;
+}
+
+@media screen and (max-width: 426px) {
+  .Mainguide {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .task-img {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.guide {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 8px;
+  align-items: flex-start;
+}
+@media screen and (max-width: 426px) {
+  .guide {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+.guideItems {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.guideItems div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+.guideItems div h2 {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 19.6px;
+}
+
+.guideItems div p {
+  font-size: 13px;
+  line-height: 18.2px;
+  margin-top: 4px;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.progress-section span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+}
+
+.progress-container {
+  background-color: #e3e3e3;
+  width: 125px;
+  height: 4px;
+  border-radius: 28px;
+}
+
+.progress {
+  background-color: #1a1a1a;
+  height: 4px;
+  text-align: right;
+  border-radius: 28px;
+  width: 25%;
+}
+
+.displayIcon svg {
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+}
+
+.displayIcon svg:hover {
+  background-color: #f7f7f7;
+  border-radius: 6px;
+}
+
+/* .guide-task-items {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+} */
+
+.notification-card {
+  padding: 6px 0px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  margin: 4px;
+  max-width: 320px;
+  width: 80%;
+  border: 1px solid #dbdbdb;
+  border-radius: 14px;
+  box-shadow: 0px 4px 8px #0000000d;
+}
+
+@media screen and (max-width: 426px) {
+  .notification-card {
+    left: 54px;
+  }
+}
+
+/* ......... correct way i shoudl be using gap in this project going forward .......................... */
+.notification-head {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.75px solid #e1e1e1;
+  gap: 6px;
+  width: 100%;
+  padding: 2px 4px 2px 4px;
+}
+
+.notification-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notification-head div div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 8px 1px 4px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+}
+
+.notification-section div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+}
+
+.notification-section div:nth-child(2):active {
+  border: 2px solid #005bd3;
+}
+
+.stores {
+  padding: 6px;
+}
+
+.notification-head div div:nth-child(2) p {
+  font-size: 13px;
+}
+
+.notification-Item:hover {
+  background-color: #f1f1f1;
+  border: 2px solid #f1f1f1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.notification-head div div div:first-child {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.notification-head div div div:first-child span {
+  background-color: #36fba1;
+  font-size: 12px;
+  font-weight: 500;
+  color: #00000066;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.notification-head div div div:first-child p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.notification-body div:first-child {
+  margin-top: 1px;
+  padding: 0px 4px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: block;
+}
+
+.notification-body a {
+  display: block;
+}
+.notification-body div:first-child a:active {
+  border: 2px solid #005bd3;
+}
+
+.notification-body a {
+  padding: 8px;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-size: 13px;
+}
+
+.notification-bottom {
+  margin-top: 4px;
+  padding: 0px 4px 0px 4px;
+}
+
+.notification-bottom {
+  border-top: 0.75px solid #e1e1e1;
+  padding-top: 4px;
+  font-size: 13px;
+}
+
+.notification-bottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notification-bottom div div:active {
+  border: 2px solid #005bd3;
+}
+
+.notification-bottom div div {
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.notification-bottom div div:first-child p {
+  font-size: 13px;
+  font-weight: 600;
+}
+.notification-bottom div div:first-child p span {
+  font-weight: 400;
+  line-height: 15.6px;
+  font-size: 12px;
+}
+
+.alert-card {
+  padding: 6px 0px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  margin: 4px;
+  max-width: 383px;
+  width: 80%;
+  border: 1px solid #dbdbdb;
+  border-radius: 14px;
+  box-shadow: 0px 4px 8px #0000000d;
+}
+
+.alert-content {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 6px;
+}
+.alert-content-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.alerts-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.alert-content-message {
+  font-size: 13px;
+  color: #616161;
+  font-weight: 600;
+  padding: 14px;
+  background-color: #f1f1f1;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.dottedCircle:hover {
+  -webkit-animation: rotating 0.00001s linear infinite;
+  animation: rotating 0.00001s linear infinite;
+}
+
+.halfCirle:hover {
+  -webkit-animation: rotating 0.00001s linear infinite;
+  animation: rotating 0.00001s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 1s linear infinite;
+  animation: rotating 1s linear infinite;
+}
+/* .halfCirlce {
+  transition: transform 5s;
+} */
+
+.taskItem .task-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+.tasks-container li div:first-of-type p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tasks-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-to-be-done {
+  display: flex;
+  gap: 106px;
+}
+
+.task-to-be-done p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.task-to-be-done .task-content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-description {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.task-description a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #005bd3;
+}
+
+.task-to-be-done button {
+  background-color: #404040;
+  border: 1.5px solid #ffffff33;
+  font-size: 12px;
+  font-weight: 600;
+  color: #f6f3f6;
+  width: fit-content;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-btn button:last-child {
+  background-color: white;
+  color: #404040;
+}
+
+.darkBackground {
+  background-color: #f3f3f3;
+}
+
+.radioItem {
+  cursor: pointer;
+}
